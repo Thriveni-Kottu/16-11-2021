@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Events</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <h1>mouseover, mouseout and mousemove</h1>
+      <div id="div1" onmouseover="fun1()" onmouseout="fun2()" onmousemove="fun3(event)">
+          <script type="text/javascript">
+              var d = document.getElementById("div1");
+              function fun1()
+              {
+                  d.style.backgroundColor = "blue"
+                  d.style.borderRadius = "10px"
+              }
+              function fun2()
+              {
+                  d.style.backgroundColor = "orange"
+                  d.style.boxShadow ="1px 15px 15px #ccc"
+              }
+              function fun3(event)
+              {
+                  var x = event.pageX;
+                  var y = event.pageY;
+                  d.innerHTML = x + ", "+y;
+                  d.style.textAlign ="center";
+                  d.style.lineHeight ="200px";
+              }
+          </script>
+          <style type="text/css">
+              #div1
+              {
+                  width: 200px;
+                  height: 200px;
+                  background-color: lightgreen ;
+              }
+          </style>
+      </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
